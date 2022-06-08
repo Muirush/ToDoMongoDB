@@ -13,9 +13,11 @@ class login : Fragment(R.layout.fragment_login) {
     private var _binding :FragmentLoginBinding ?= null
     private  val binding get() = _binding !!
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentLoginBinding.bind(view)
+
         initViews()
     }
 
