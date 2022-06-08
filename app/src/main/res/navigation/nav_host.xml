@@ -16,7 +16,25 @@
     </fragment>
     <fragment
         android:id="@+id/viewNotes"
-        android:name="com.galoppingtech.todomongodb.ViewNotes"
+        android:name="com.galoppingtech.todomongodb.UI.ViewNotes"
         android:label="fragment_view_notes"
         tools:layout="@layout/fragment_view_notes" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.galoppingtech.todomongodb.UI.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_createNote"
+            app:destination="@id/createNote" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.galoppingtech.todomongodb.Register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
