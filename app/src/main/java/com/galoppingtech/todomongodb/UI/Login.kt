@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.galoppingtech.todomongodb.R
 import com.galoppingtech.todomongodb.databinding.FragmentLoginBinding
+import io.realm.kotlin.Realm
+import io.realm.kotlin.RealmConfiguration
 
 
 class login : Fragment(R.layout.fragment_login) {
@@ -17,6 +19,7 @@ class login : Fragment(R.layout.fragment_login) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentLoginBinding.bind(view)
+
 
         initViews()
     }
@@ -45,7 +48,9 @@ class login : Fragment(R.layout.fragment_login) {
     }
 
     private fun loginMethod() {
-        Toast.makeText(activity,"Progressing well", Toast.LENGTH_SHORT).show()
+//        val config = RealmConfiguration.Builder(schema = setOf(Task::class))
+//            .build()
+//        val realm: Realm = Realm.open(config)
     }
 
 }
